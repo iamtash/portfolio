@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "portfolio-frontend",
   "version": "0.1.0",
   "private": true,
@@ -40,9 +39,4 @@
       "last 1 safari version"
     ]
   }
-=======
-  "name": "portfolio-backend",
-  "private": true,
-  "dependencies": {}
->>>>>>> bf087f0bdd47e88785450a64e71edfc4992dfc96
 }
