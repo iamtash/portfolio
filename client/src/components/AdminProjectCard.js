@@ -36,28 +36,24 @@ class AdminProjectCard extends Component {
         </>
     )
 
-
     card = () => <><CardContent {...this.props} buttons={this.buttons} /></>
 
     editor = () => {
         return (
-            <>
-                <Card>
-                    <Card.Body>
-                        <EditProject editing={this.props} closeEditor={this.closeEditor} /> 
-                    </Card.Body>
-                </Card>
-                <br />
-            </>
+            <Card>
+                <Card.Body>
+                    <EditProject editing={this.props} closeEditor={this.closeEditor} /> 
+                </Card.Body>
+            </Card>
         )
     }
 
     render() {
-      return (
+        return (
             <>
                 {this.state.editing ? this.editor() : this.card()}
             </>
-      )
+        )
     }
 }
 

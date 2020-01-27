@@ -14,7 +14,6 @@ class Projects extends Component {
                 {projects.map(project => <ProjectContainer key={project.id} project={project} />)}
             </CardColumns>
         )
-
     }
 
     handleChange = event => {
@@ -46,7 +45,6 @@ class Projects extends Component {
             </div>
         )
     }
-
 }
 
 export default Projects
