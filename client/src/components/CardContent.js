@@ -16,9 +16,9 @@ const CardContent = ({ title, description, githubUrl, demoUrl, likes, buttons })
                         <Card.Text className="small">Likes: {likes}</Card.Text>
                 </Card.Footer>
             </Card>
-            <br />
         </>
     )
 }
 
 export default CardContent
+
