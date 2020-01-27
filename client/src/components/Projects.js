@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ProjectContainer from '../containers/ProjectContainer'
 import memoize from 'memoize-one'
+import { CardColumns } from 'react-bootstrap'
 
 class Projects extends Component {
     state = {
@@ -9,9 +10,9 @@ class Projects extends Component {
 
     renderProjects = projects => {
         return (
-            <div>
+            <CardColumns>
                 {projects.map(project => <ProjectContainer key={project.id} project={project} />)}
-            </div>
+            </CardColumns>
         )
 
     }
