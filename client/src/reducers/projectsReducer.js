@@ -26,7 +26,7 @@ export default function projectsReducer(
             case 'LIKE_PROJECT':
                 return {
                     ...state,
-                    requesting: false,
+                    requesting: state.requesting,
                     projects: state.projects.map(project => {
                         if (project.id === action.project.id) {
                             return {
