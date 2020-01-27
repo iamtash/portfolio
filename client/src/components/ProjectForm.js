@@ -38,7 +38,7 @@ const ProjectForm = ({ title, githubUrl, demoUrl, description, handleChange }) =
                     name="description"
                     value={description}
                     placeholder="Description"
-                    rows="4"
+                    rows="6"
                     required
                 />
             </Form.Group>
