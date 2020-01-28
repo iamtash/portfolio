@@ -16,6 +16,8 @@ class ProjectsController < ApplicationController
     if project 
       if params[:like]
         project.update(likes: project.likes + 1) 
+      elsif params[:dislike]
+        project.update(likes: project.likes - 1)
       else
         project.update(project_params)
       end
