@@ -24,6 +24,7 @@ export default function projectsReducer(
                     requesting: state.requesting
                 }
             case 'LIKE_PROJECT':
+            case 'DISLIKE_PROJECT':
                 return {
                     ...state,
                     requesting: state.requesting,
