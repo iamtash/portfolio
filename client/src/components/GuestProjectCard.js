@@ -1,30 +1,40 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { likeProject } from '../actions/projects'
+import { likeProject, dislikeProject } from '../actions/projects'
 import CardContent from './CardContent'
 
-const GuestProjectCard = props => {
-    const [disabled, setDisabled] = useState(false)
-
-    const handleLike = () => {
-        setDisabled(true)
-        props.likeProject(props.id)
+class GuestProjectCard extends Component {
+    state = {
+        liked: false
     }
 
-    const button = (
-        <button 
-            className="btn btn-primary float-right" 
-            onClick={handleLike}
-            disabled={disabled} >
-            Like
-        </button>
-    )
+    handleClick = () => {
+        this.setState(prevState => ({ liked: !prevState.liked} ), 
+            () => {
+                if (this.state.liked) this.props.likeProject(this.props.id)
+                else this.props.dislikeProject(this.props.id)
+            }
+        )
+    }
 
-    return (
-        <>
-            <CardContent {...props} buttons={button} />
-        </>
-    )
+    button = () => {
+        return (
+            <button 
+                className="btn btn-primary float-right" 
+                onClick={this.handleClick} >
+                {this.state.liked ? 'Liked' : 'Like'}
+            </button>
+        )
+    } 
+
+    render() {
+        return (
+            <>
+                <CardContent {...this.props} buttons={this.button()} />
+            </>
+        )
+    }
+    
 }
 
-export default connect(undefined, { likeProject })(GuestProjectCard)
+export default connect(undefined, { likeProject, dislikeProject })(GuestProjectCard)
