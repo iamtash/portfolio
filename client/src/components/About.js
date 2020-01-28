@@ -14,9 +14,7 @@ const About = () => {
                 <Col xs={8}>
                     <Card border="info" style={{ width: '30rem', padding: '2em' }}>
                         <Card.Body>
-                            <Card.Text>
                             <h5 className="font-weight-light">{blurb}</h5>
-                            </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
