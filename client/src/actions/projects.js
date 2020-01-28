@@ -50,6 +50,21 @@ export const likeProject = id => {
     }
 }
 
+export const dislikeProject = id => {
+    return dispatch => {
+        axios.patch(`${url}/${id}`, { dislike: true })
+            .then(resp => {
+                console.log(resp)
+                const { id, likes } = resp.data
+                dispatch({
+                    type: 'DISLIKE_PROJECT',
+                    project: { id, likes }
+                })
+            })
+            .catch(error => console.log('project disliking error', error))
+    }
+}
+
 export const deleteProject = id => {
     return dispatch => {
         axios.delete(`${url}/${id}`)
