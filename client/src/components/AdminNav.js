@@ -6,7 +6,7 @@ const AdminNav = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Nav className="mr-auto">
-                <NavLink className="nav-link" to="/projects">Projects</NavLink>
+                <NavLink className="nav-link" to="/projects"><span className="font-weight-light">Projects</span></NavLink>
             </Nav>
        </Navbar>
     )
