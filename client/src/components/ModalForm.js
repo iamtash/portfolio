@@ -54,4 +54,4 @@ class ModalForm extends Component {
     }
 }
 
-export default connect(undefined, { addProject })(ModalForm)
+export default connect(null, { addProject })(ModalForm)

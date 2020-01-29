@@ -38,4 +38,4 @@ class EditProject extends Component {
     }
 }
 
-export default connect(undefined, { editProject })(EditProject)
+export default connect(null, { editProject })(EditProject)

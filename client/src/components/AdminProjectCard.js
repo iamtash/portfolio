@@ -57,4 +57,4 @@ class AdminProjectCard extends Component {
     }
 }
 
-export default connect(undefined, { deleteProject })(AdminProjectCard)
+export default connect(null, { deleteProject })(AdminProjectCard)

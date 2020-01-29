@@ -53,4 +53,4 @@ class Login extends PureComponent {
     }
 }
 
-export default connect(undefined, { login })(Login)
+export default connect(null, { login })(Login)

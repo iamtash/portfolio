@@ -27,4 +27,4 @@ const GuestProjectCard = props => {
     )
 }
 
-export default connect(undefined, { likeProject })(GuestProjectCard)
+export default connect(null, { likeProject })(GuestProjectCard)
