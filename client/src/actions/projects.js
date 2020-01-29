@@ -10,7 +10,6 @@ export const getProjects = () => {
             .then(resp => {
                 console.log(resp)
                 const projects = resp.data.map(project => humps.camelizeKeys(project))
-                console.log(projects)
                 dispatch({
                     type: 'GET_PROJECTS',
                     projects
