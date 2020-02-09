@@ -40,6 +40,7 @@ Blog & Video
 
 [Read about what I learned while building this project!](https://iamtash.github.io/react-redux_go_with_the_flow)
 
+Click below to check out a demo!<br>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qXFO5nyOvdk
 " target="_blank"><img src="http://img.youtube.com/vi/qXFO5nyOvdk/0.jpg" 
 alt="Check out a demo of my app" width="240" height="180" border="10" /></a>
